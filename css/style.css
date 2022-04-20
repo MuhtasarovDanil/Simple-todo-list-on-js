@@ -1,0 +1,119 @@
+/* === Default styles === */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+
+    background-color: lightgrey;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    outline: none;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+input {
+    width: 90%;
+}
+
+/* === Containers === */
+.container {
+    max-width: 1175px;
+    width: 100%;
+
+    padding: 0 15px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.task-container {
+    padding: 20px;
+}
+
+.form-container {
+    justify-content: right;
+    display: flex;
+
+    padding: 20px 0;
+}
+
+/* === ToDo styles === */
+.to-do__header {
+    background-color: #292b2c;
+    padding: 20px 0;
+}
+
+.task__title {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.task-element {
+    border-bottom: 1px solid gray;
+
+    padding: 10px 0 10px 0;
+    margin: 20px 0;
+
+    display: flex;
+    align-items: center;
+
+    word-break: break-all;
+    max-width: 100em;
+}
+
+.task__content {
+    font-size: 2rem;
+    max-width: 90rem;
+}
+
+/* === Buttons === */
+.btn {
+    padding: 10 15px;
+    margin-left: 10px;
+
+    color: gold;
+    background-color: royalblue;    
+
+    transition: 0.1s linear;
+}
+.btn:hover {
+    background-color: blue;
+    color: white;
+}
+
+.btn--delete {
+    margin-left: 20px; 
+    height: 20px;   
+
+    background-color: red;
+    color: whitesmoke;
+    
+    transition: 0.1s linear;
+}
+.btn--delete:hover {
+    background-color: firebrick;
+}
+
+
+
+
+
