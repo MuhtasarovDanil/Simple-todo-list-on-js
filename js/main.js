@@ -1,4 +1,3 @@
-"use strict";
 import { createTaskElement, clearAll, deleteButtonClickHandler } from './todo-actions.js';
 import { changeColorTheme } from './background-theme.js';
 
