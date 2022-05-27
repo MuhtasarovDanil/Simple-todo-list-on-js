@@ -2,46 +2,50 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>To-do</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>To-do</title>
 </head>
 
-<body>
-    <div class="to-do__header">
-        <div class="container">
-            <div class="form-container">
-                <input type="text" class="to-do__input" placeholder="Type your task">
-                <button class="btn btn--create">Create new task</button>
-                <button class="btn btn--clear">Clear all</button>
-            </div>
-            <!-- /.form-container -->
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.to-do__header -->
-    <div class="to-do__inner">
-        <div class="container">
-            <div class="task-header">
-                <h2 class="task__title">Your tasks:</h2>
-            </div>
-            <!-- /.task-header -->
-            <ul class="task-container">
-                <li class="task-element">
-                    <p class="task__content">Here display your tasks</p>
-                    <button class="btn btn--delete">Delete</button>
-                </li>
-                <!-- /.task-element -->
-            </ul>
-            <!-- /.task-container -->
-        </div>
-        <!-- /.container -->
-    </div>
-    <!-- /.to-do__inner -->
+<body class="light-theme">
+	<div class="to-do__header light">
+		<div class="container">
+			<div class="form-container">
+				<input type="text" class="to-do__input" placeholder="Type your task">
+				<button class="btn btn--create">Create new task</button>
+				<button class="btn btn--clear">Clear all</button>
+				<button class="btn btn--change__theme">
+					<img src="images/theme-light-dark.svg" width="20" height="20" alt="change color theme">
+				</button>
+			</div>
+			<!-- /.form-container -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.to-do__header -->
+	<div class="to-do__inner">
+		<div class="container">
+			<div class="task-header">
+				<h2 class="task__title">Your tasks:</h2>
+			</div>
+			<!-- /.task-header -->
+			<ul class="task-container">
+				<li class="task-element">
+					<p class="task__content">Here display your tasks</p>
+					<button class="btn btn--delete">Delete</button>
+				</li>
+				<!-- /.task-element -->
+			</ul>
+			<!-- /.task-container -->
+		</div>
+		<!-- /.container -->
+	</div>
+	<!-- /.to-do__inner -->
 
-    <script src="js/script.js"></script>
+	<script type="module" src="js/todo-actions.js"></script>
+	<script type="module" src="js/main.js"></script>
 </body>
 
 </html>

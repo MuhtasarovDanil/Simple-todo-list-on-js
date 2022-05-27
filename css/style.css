@@ -2,118 +2,145 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-    margin: 0;
-
-    background-color: lightgrey;
+  margin: 0;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 button {
-    outline: none;
-    background: none;
-    border: 0;
-    cursor: pointer;
-    font-weight: 700;
+  outline: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 input {
-    width: 90%;
+  width: 90%;
+}
+input:focus,
+input:active {
+  border: none;
+  outline: none;
+}
+
+/* === Light and dark themes === */
+.light-theme {
+  background-color: lightgrey;
+  color: black;
+}
+
+.dark-theme {
+  background-color: #292b2c;
+  color: white;
 }
 
 /* === Containers === */
 .container {
-    max-width: 1175px;
-    width: 100%;
+  max-width: 1175px;
+  width: 100%;
 
-    padding: 0 15px;
-    margin: 0 auto;
+  padding: 0 15px;
+  margin: 0 auto;
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .task-container {
-    padding: 20px;
+  padding: 20px;
 }
 
 .form-container {
-    justify-content: right;
-    display: flex;
+  justify-content: right;
+  display: flex;
 
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 /* === ToDo styles === */
 .to-do__header {
-    background-color: #292b2c;
-    padding: 20px 0;
+  padding: 20px 0;
+}
+.to-do__header.light {
+  background-color: #292b2c;
+}
+.to-do__header.dark {
+  background-color: gray;
 }
 
 .task__title {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .task-element {
-    border-bottom: 1px solid gray;
+  border-bottom: 1px solid gray;
 
-    padding: 10px 0 10px 0;
-    margin: 20px 0;
+  padding: 10px 0 10px 0;
+  margin: 20px 0;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    word-break: break-all;
-    max-width: 100em;
+  word-break: break-all;
+  max-width: 100em;
 }
 
 .task__content {
-    font-size: 2rem;
-    max-width: 90rem;
+  font-size: 2rem;
+  max-width: 90rem;
 }
 
 /* === Buttons === */
 .btn {
-    padding: 10 15px;
-    margin-left: 10px;
+  padding: 10 15px;
+  margin-left: 10px;
 
-    color: gold;
-    background-color: royalblue;    
+  color: gainsboro;
+  background-color: royalblue;
 
-    transition: 0.1s linear;
+  transition: 0.1s linear;
 }
+
+.btn.dark {
+  background-color: royalblue;
+}
+
 .btn:hover {
-    background-color: blue;
-    color: white;
+  background-color: blue;
+  color: white;
 }
 
 .btn--delete {
-    margin-left: 20px; 
-    height: 20px;   
+  margin-left: 20px;
+  height: 20px;
 
-    background-color: red;
-    color: whitesmoke;
-    
-    transition: 0.1s linear;
+  background-color: red;
+  color: whitesmoke;
+
+  transition: 0.1s linear;
 }
 .btn--delete:hover {
-    background-color: firebrick;
+  background-color: firebrick;
 }
 
+.btn--change__theme {
+  background: none;
+}
 
-
-
-
+.btn--change__theme:hover {
+  background-color: orange;
+}
