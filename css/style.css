@@ -38,11 +38,15 @@ input:active {
 .light-theme {
   background-color: lightgrey;
   color: black;
+
+  transition: background 0.2s;
 }
 
 .dark-theme {
   background-color: #292b2c;
   color: white;
+
+  transition: background 0.2s;
 }
 
 /* === Containers === */
@@ -75,9 +79,13 @@ input:active {
 }
 .to-do__header.light {
   background-color: #292b2c;
+
+  transition: background 0.2s;
 }
 .to-do__header.dark {
   background-color: gray;
+
+  transition: background 0.2s;
 }
 
 .task__title {
@@ -137,10 +145,7 @@ input:active {
   background-color: firebrick;
 }
 
-.btn--change__theme {
-  background: none;
-}
-
+.btn--change__theme,
 .btn--change__theme:hover {
-  background-color: orange;
+  background: transparent;
 }
