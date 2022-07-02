@@ -6,11 +6,11 @@ export const changeColorTheme = (evt) => {
   }
 
   const body = document.querySelector('body')
+  const main = document.querySelector('main')
   const header = document.querySelector('.header')
-  const taskContainer = document.querySelector('.task-container')
 
   const themes = ['light-theme', 'dark-theme']
-  const changeThemeElements = [body, header, taskContainer]
+  const changeThemeElements = [body, header, main]
 
   const currentIndexOfTheme = themes.indexOf(body.className)
   const isLastThemeIndex = currentIndexOfTheme === themes.length - 1
