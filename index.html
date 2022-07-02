@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,42 +9,40 @@
 </head>
 
 <body class="light-theme">
-	<div class="to-do__header light">
+	<header class="header light-theme">
 		<div class="container">
 			<div class="form-container">
-				<input type="text" class="to-do__input" placeholder="Type your task">
+				<input type="text" class="todo__input" placeholder="Type your task">
 				<button class="btn btn--create">Create new task</button>
 				<button class="btn btn--clear">Clear all</button>
 				<button class="btn btn--change__theme">
 					<img src="images/theme-light-dark.svg" width="20" height="20" alt="change color theme">
 				</button>
 			</div>
-			<!-- /.form-container -->
+			<!-- ./form-container -->
 		</div>
-		<!-- /.container -->
-	</div>
-	<!-- /.to-do__header -->
-	<div class="to-do__inner">
+		<!-- ./container -->
+	</header>
+	<!-- /.header -->
+	<main class="todo light-theme">
 		<div class="container">
-			<div class="task-header">
-				<h2 class="task__title">Your tasks:</h2>
+			<div class="todo-header">
+				<h2 class="todo__title">Your tasks:</h2>
 			</div>
-			<!-- /.task-header -->
+			<!-- /.todo-header -->
 			<ul class="task-container">
-				<li class="task-element">
+				<li class="task-item">
 					<p class="task__content">Here display your tasks</p>
 					<button class="btn btn--delete">Delete</button>
 				</li>
-				<!-- /.task-element -->
 			</ul>
 			<!-- /.task-container -->
 		</div>
 		<!-- /.container -->
-	</div>
-	<!-- /.to-do__inner -->
+	</main>
 
+	<script type="module" src="js/background-theme.js"></script>
 	<script type="module" src="js/todo-actions.js"></script>
 	<script type="module" src="js/main.js"></script>
 </body>
-
 </html>

@@ -1,32 +1,33 @@
 export const createTaskElement = () => {
-	const taskContainer = document.querySelector('.task-container');
-	const toDoField = document.querySelector('.to-do__input');
-	if (!toDoField.value) return;
+	const toDoField = document.querySelector('.todo__input')
 
-	const createTaskHTML = document.createRange().createContextualFragment(
+	if (!toDoField) {
+		return
+	}
+
+	const taskContainer = document.querySelector('.task-container')
+	const createHtmlTask = document.createRange().createContextualFragment(
 		` 
-		<li class="task-element">
-        <p class="task__content">${toDoField.value}</p>
-        <button class="btn btn--delete">Delete</button>
-      </li> 
-		`);
+		<li class="task-item">
+			<p class="task__content">${toDoField.value}</p>
+			<button class="btn btn--delete">Delete</button>
+		 </li> 
+		`)
 
-	taskContainer.appendChild(createTaskHTML);
-	toDoField.value = "";
+	taskContainer.appendChild(createHtmlTask)
+	toDoField.value = ''
 }
 
-/* Clear task */
 export const clearAll = () => {
-	const taskContainer = document.querySelector('.task-container');
-	taskContainer.innerHTML = "";
-};
+	const taskContainer = document.querySelector('.task-container')
+	taskContainer.innerHTML = ''
+}
 
-/* Delete task */
 export const deleteButtonClickHandler = (evt) => {
-	const deleteButton = evt.target.closest('.btn--delete');
-	const taskElement = evt.target.closest('.task-element');
+	const deleteButton = evt.target.closest('.btn--delete')
 
-	if (!deleteButton || !taskElement) return;
-
-	taskElement.remove();
-};
+	if (deleteButton) {
+		const taskItem = evt.target.closest('.task-item')
+		taskItem.remove()
+	}
+}
